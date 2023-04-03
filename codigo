@@ -32,7 +32,7 @@ namespace ListaAtividades01
             sl = sb - td;
             
 
-            Console.Write("Horas Trabalhadas: " +  ht + "H" + '\n');
+            Console.Write('\n' + "Horas Trabalhadas: "  + ht + "H" + '\n');
             Console.Write("Salário Bruto: " + "R$" + sb + '\n');
             Console.Write("Desconto: " + "R$" + string.Format("{0:N}", td) + '\n');
             Console.Write("Salário Liquido: " + "R$" + string.Format("{0:N}", sl) );
