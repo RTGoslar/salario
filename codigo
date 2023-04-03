@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Reflection.Emit;
+using System.Runtime.InteropServices;
+using System.Security.Principal;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ListaAtividades01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine(" ### CALCULO DE PAGAMENTO ### " + '\n');
+            Console.Write("Informe as horas trabalhadas do mês: ");
+            double ht = double.Parse(Console.ReadLine());
+
+            Console.Write("Informe o valor de hora trabalhada R$: ");
+            double vh = double.Parse(Console.ReadLine());
+
+            Console.Write("Informe o percentual de desconto: ");
+            double pd = double.Parse(Console.ReadLine());
+
+            double sb, td, sl;
+            
+            sb = ht * vh;
+            td = (pd / 100) * sb;
+            sl = sb - td;
+            
+
+            Console.Write("Horas Trabalhadas: " + "R$" + ht + "H" + '\n');
+            Console.Write("Salário Bruto: " + "R$" + sb + '\n');
+            Console.Write("Desconto: " + "R$" + string.Format("{0:N}", td) + '\n');
+            Console.Write("Salário Liquido: " + "R$" + string.Format("{0:N}", sl) );
+            Console.ReadKey();
+        }
+
+    }         
+        
+ }
